@@ -1,0 +1,11 @@
+python-dotenv
+fastapi[all]
+uvicorn
+pipecat-ai[daily,elevenlabs,openai,silero,google,deepgram,cartesia,azure]==0.0.52
+sqlalchemy
+psycopg2-binary
+langchain_core
+langchain_openai
+psutil
+boto3
+python-docx

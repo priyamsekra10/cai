@@ -1,0 +1,43 @@
+services:
+  api:
+    build: .
+    ports:
+      - "7860:7860"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DAILY_API_KEY=${DAILY_API_KEY}
+      - BOT_IMPLEMENTATION=${BOT_IMPLEMENTATION}
+      - DEEPGRAM_API_KEY=${DEEPGRAM_API_KEY}
+      - ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY}
+      - DAILY_SAMPLE_ROOM_URL=${DAILY_SAMPLE_ROOM_URL}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    volumes:
+      - .:/app
+volumes:
+  audio_files:
+
+
+
+# version: '3.8'
+# services:
+#   api:
+#     build: .
+#     ports:
+#       - "7860:7860"
+#     environment:
+#       - OPENAI_API_KEY=${OPENAI_API_KEY}
+#       - DB_CONNECTION=${DB_CONNECTION}
+#       - DB_HOST=${DB_HOST}
+#       - DB_PORT=${DB_PORT}
+#       - DB_USER=${DB_USER}
+#       - DB_NAME=${DB_NAME}
+#       - DB_PASSWORD=${DB_PASSWORD}
+#       - JWT_PRIVATE_KEY=${JWT_PRIVATE_KEY}
+#       - DAILY_API_KEY=${DAILY_API_KEY}
+#       - BOT_IMPLEMENTATION=${BOT_IMPLEMENTATION}
+#       - DEEPGRAM_API_KEY=${DEEPGRAM_API_KEY}
+#       - ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY}
+#     volumes:
+#       - ./app:/app
+# volumes:
+#   audio_files:
